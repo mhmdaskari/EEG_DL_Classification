@@ -1,0 +1,111 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eegclassify"
+version = "0.1.0"
+description = "Reproducible EEG classification experiments across TensorFlow, PyTorch, and JAX."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Mohammad Askari" }
+]
+dependencies = [
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "scipy>=1.10"
+]
+
+[project.optional-dependencies]
+data = [
+  "mne>=1.6"
+]
+tensorflow = [
+  "tensorflow[and-cuda]>=2.12; platform_system == 'Linux'",
+  "tensorflow>=2.12; platform_system != 'Linux'"
+]
+pytorch = [
+  "torch>=2.0"
+]
+jax = [
+  "jax>=0.4",
+  "flax>=0.8",
+  "optax>=0.2"
+]
+jax-cuda13 = [
+  "jax[cuda13]>=0.4; platform_system == 'Linux'",
+  "flax>=0.8",
+  "optax>=0.2"
+]
+notebooks = [
+  "jupyterlab>=4",
+  "nbclient>=0.10",
+  "ipykernel>=6"
+]
+docs = [
+  "black>=24",
+  "mkdocs>=1.6",
+  "mkdocs-material>=9.5",
+  "mkdocstrings[python]>=0.25",
+  "mkdocs-autorefs>=1.0",
+  "mkdocs-git-revision-date-localized-plugin>=1.2",
+  "mkdocs-jupyter>=0.25",
+  "pymdown-extensions>=10.0"
+]
+dev = [
+  "pytest>=8",
+  "nbclient>=0.10",
+  "packaging>=25",
+  "build>=1.2",
+  "twine>=5"
+]
+release = [
+  "packaging>=25",
+  "build>=1.2",
+  "twine>=5"
+]
+all = [
+  "mne>=1.6",
+  "tensorflow[and-cuda]>=2.12; platform_system == 'Linux'",
+  "tensorflow>=2.12; platform_system != 'Linux'",
+  "torch>=2.0",
+  "jax>=0.4",
+  "flax>=0.8",
+  "optax>=0.2",
+  "jupyterlab>=4",
+  "nbclient>=0.10",
+  "ipykernel>=6",
+  "black>=24",
+  "mkdocs>=1.6",
+  "mkdocs-material>=9.5",
+  "mkdocstrings[python]>=0.25",
+  "mkdocs-autorefs>=1.0",
+  "mkdocs-git-revision-date-localized-plugin>=1.2",
+  "mkdocs-jupyter>=0.25",
+  "pymdown-extensions>=10.0",
+  "pytest>=8",
+  "packaging>=25",
+  "build>=1.2",
+  "twine>=5"
+]
+
+[project.scripts]
+eegclassify = "eegclassify.cli:main"
+eegclassify-download-bci2a = "eegclassify.cli:download_bci2a_main"
+eegclassify-prepare-bci2a = "eegclassify.cli:prepare_bci2a_main"
+eegclassify-compare-data = "eegclassify.cli:compare_data_main"
+eegclassify-train = "eegclassify.cli:train_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+eegclassify = ["resources/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

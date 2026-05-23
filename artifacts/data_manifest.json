@@ -1,0 +1,128 @@
+{
+  "data_dir": "data/processed",
+  "files": {
+    "X_test.npy": {
+      "dtype": "float64",
+      "exists": true,
+      "expected_shape": [
+        443,
+        22,
+        1000
+      ],
+      "sha256": "62afadee5b07f538c30faa99d5cf5302a0d19db3286354dc551dfb8b8e962966",
+      "shape": [
+        443,
+        22,
+        1000
+      ],
+      "size_bytes": 77968128
+    },
+    "X_train_valid.npy": {
+      "dtype": "float64",
+      "exists": true,
+      "expected_shape": [
+        2115,
+        22,
+        1000
+      ],
+      "sha256": "c5ab2b4065e3214b264b0dfc700fa01f18942cb26553fd489cd049b1034a084e",
+      "shape": [
+        2115,
+        22,
+        1000
+      ],
+      "size_bytes": 372240128
+    },
+    "person_test.npy": {
+      "counts": {
+        "0": 50,
+        "1": 50,
+        "2": 50,
+        "3": 50,
+        "4": 47,
+        "5": 49,
+        "6": 50,
+        "7": 50,
+        "8": 47
+      },
+      "dtype": "float64",
+      "exists": true,
+      "expected_shape": [
+        443,
+        1
+      ],
+      "sha256": "d554045f0dfce3b0fb1c74edd63ed2f1ef350911c217ccf0b119e8928dac90fb",
+      "shape": [
+        443,
+        1
+      ],
+      "size_bytes": 3672
+    },
+    "person_train_valid.npy": {
+      "counts": {
+        "0": 237,
+        "1": 236,
+        "2": 236,
+        "3": 234,
+        "4": 235,
+        "5": 236,
+        "6": 238,
+        "7": 232,
+        "8": 231
+      },
+      "dtype": "float64",
+      "exists": true,
+      "expected_shape": [
+        2115,
+        1
+      ],
+      "sha256": "376016de5c55b2c506b278997e2e315031677a6126d14305926db18cc3959b31",
+      "shape": [
+        2115,
+        1
+      ],
+      "size_bytes": 17048
+    },
+    "y_test.npy": {
+      "counts": {
+        "769": 111,
+        "770": 127,
+        "771": 96,
+        "772": 109
+      },
+      "dtype": "int32",
+      "exists": true,
+      "expected_shape": [
+        443
+      ],
+      "sha256": "74f233b3ed568ed65a75035c1aa9058aedc1430462ede28412b00d031cd5276e",
+      "shape": [
+        443
+      ],
+      "size_bytes": 1900
+    },
+    "y_train_valid.npy": {
+      "counts": {
+        "769": 529,
+        "770": 513,
+        "771": 543,
+        "772": 530
+      },
+      "dtype": "int32",
+      "exists": true,
+      "expected_shape": [
+        2115
+      ],
+      "sha256": "7fa4de1f7d126a475e621fff2dd061736832ccf7a71f4fd56cbf77100e045635",
+      "shape": [
+        2115
+      ],
+      "size_bytes": 8588
+    }
+  },
+  "source": {
+    "dataset_page": "https://www.bbci.de/competition/iv/",
+    "gdf_archive": "https://www.bbci.de/competition/download/competition_iv/BCICIV_2a_gdf.zip",
+    "true_labels_archive": "https://www.bbci.de/competition/iv/results/ds2a/true_labels.zip"
+  }
+}

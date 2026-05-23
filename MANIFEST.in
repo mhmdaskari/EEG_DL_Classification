@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+recursive-include docs *.md
+recursive-include notebooks *.ipynb
+prune data
+prune artifacts/runs
+global-exclude *.npy
+global-exclude *.keras
+global-exclude *.h5
+global-exclude *.pt
+global-exclude *.pth
+global-exclude *.ckpt

@@ -1,0 +1,109 @@
+site_name: EEGClassify
+site_description: Reproducible EEG classification across TensorFlow, PyTorch, and JAX.
+site_url: https://mhmdaskari.github.io/EEG_DL_Classification/
+repo_url: https://github.com/mhmdaskari/EEG_DL_Classification
+repo_name: mhmdaskari/EEG_DL_Classification
+
+theme:
+  name: material
+  features:
+    - toc.follow
+    - navigation.top
+    - navigation.footer
+    - navigation.sections
+    - navigation.indexes
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to system preference
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Data: data.md
+  - Reproduce Results: reproduce.md
+  - Results: results.md
+  - API: api.md
+
+watch:
+  - src
+  - docs
+
+plugins:
+  - search
+  - autorefs
+  - offline
+  - mkdocs-jupyter
+  - git-revision-date-localized:
+      enable_creation_date: true
+      strict: false
+  - mkdocstrings:
+      handlers:
+        python:
+          inventories:
+            - https://docs.python.org/3/objects.inv
+            - https://numpy.org/doc/stable/objects.inv
+          paths:
+            - src
+          options:
+            docstring_style: google
+            docstring_options:
+              ignore_init_summary: true
+            docstring_section_style: table
+            filters:
+              - "!^_"
+            inherited_members: false
+            merge_init_into_class: true
+            members_order: source
+            separate_signature: true
+            unwrap_annotated: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_root_toc_entry: true
+            show_signature_annotations: true
+            show_source: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+            summary: true
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+edit_uri: edit/main/docs/
