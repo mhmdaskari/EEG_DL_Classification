@@ -84,7 +84,7 @@ def augment_trials(
     config: PreprocessingConfig,
     rng: np.random.Generator | None = None,
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Apply the original notebook augmentation routine.
+    """Apply the package temporal augmentation routine.
 
     The routine trims each trial, creates a max-pooled copy, creates an averaged copy
     with Gaussian noise, and appends each temporal subsampling offset.
@@ -231,7 +231,7 @@ def prepare_splits(
 
 
 def prepare_gan_training_arrays(x_train: np.ndarray, y_train: np.ndarray) -> tuple[np.ndarray, np.ndarray, float]:
-    """Normalize classifier arrays into the GAN format used by the original notebook.
+    """Normalize classifier arrays into the GAN sequence format.
 
     Args:
         x_train: Classifier inputs shaped `(n, time, 1, channels)`.

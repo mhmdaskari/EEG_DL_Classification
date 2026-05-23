@@ -1,11 +1,13 @@
 # Reproduce Results
 
-The reproduction notebooks are parameterized:
+The package notebooks and CLI share the same experiment settings, so you can move between an interactive workflow and a scripted run without changing the core configuration.
 
-- `notebooks/00_data_postprocessing.ipynb`
-- `notebooks/01_tensorflow_reproduction.ipynb`
-- `notebooks/02_pytorch_reproduction.ipynb`
-- `notebooks/03_jax_reproduction.ipynb`
+The rendered notebook examples are:
+
+- [Data postprocessing](examples/00_data_postprocessing.ipynb)
+- [TensorFlow reproduction](examples/01_tensorflow_reproduction.ipynb)
+- [PyTorch reproduction](examples/02_pytorch_reproduction.ipynb)
+- [JAX/Flax reproduction](examples/03_jax_reproduction.ipynb)
 
 Each training notebook defaults to:
 
@@ -19,7 +21,7 @@ classifier reproduction. Set `USE_GAN_AUGMENTATION = True` to train a conditiona
 GAN on the training split, append generated samples, and then train the selected
 classifier on real plus synthetic training data.
 
-The original preprocessing defaults are preserved:
+The default experiment settings are:
 
 - labels `769-772` are converted to `0-3`
 - validation ratio is `0.17`
@@ -29,13 +31,12 @@ The original preprocessing defaults are preserved:
 - GAN epochs are `20`
 - augmentation uses trim, max-pooling, averaging with Gaussian noise, and subsampling
 
-GAN augmentation is available for CNN, LSTM, and CNN-LSTM. The original notebooks
-only used GAN augmentation with CNN, so parity checks compare only the GAN+CNN path
-against the legacy GAN-CNN result.
+GAN augmentation is available for CNN, LSTM, and CNN-LSTM. The GAN+CNN row below is
+the canonical GAN-augmented benchmark path for the package.
 
-Original notebook baselines:
+Reference accuracy targets:
 
-| Experiment | Original test accuracy |
+| Experiment | Reference test accuracy |
 | --- | ---: |
 | CNN | 70.49% |
 | CNN-LSTM | 60.95% |
@@ -54,7 +55,7 @@ For GPU runs, install the GPU extras from the installation page and do not set
 `CUDA_VISIBLE_DEVICES=-1`. TensorFlow GPU training uses the CLI's CUDA path setup;
 PyTorch and JAX use their framework CUDA packages directly.
 
-For the legacy GAN+CNN parity path:
+For the GAN-augmented CNN path:
 
 ```bash
 python -m eegclassify.cli train \

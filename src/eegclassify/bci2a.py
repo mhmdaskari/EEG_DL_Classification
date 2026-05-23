@@ -27,7 +27,7 @@ from .data import DatasetBundle, save_processed_arrays, summarize_processed_dir,
 
 @dataclass(frozen=True)
 class BCI2AConversionConfig:
-    """Parameters for recreating the course project `.npy` subset.
+    """Parameters for recreating the package processed `.npy` dataset.
 
     Attributes:
         window_samples: Number of time samples extracted per trial.
@@ -36,9 +36,9 @@ class BCI2AConversionConfig:
         test_trial_stop: Stop trial ordinal for block-split test mode.
         eeg_channels: Number of EEG channels to extract.
         scale_to_microvolts: Whether to convert MNE's volt values to microvolts.
-        quantize_microvolts: Whether to round onto the original GDF microvolt grid.
+        quantize_microvolts: Whether to round onto the GDF microvolt grid.
         reject_artifacts: Whether to remove trials containing GDF artifact marker `1023`.
-        split_map: Built-in/course split, custom split-map JSON path, or `None` for block split.
+        split_map: Built-in package split, custom split-map JSON path, or `None` for block split.
     """
 
     window_samples: int = DEFAULT_WINDOW_SAMPLES
@@ -104,7 +104,7 @@ def copy_local_cache_to_processed(
     """Copy an existing local `.npy` cache into the processed data directory.
 
     Args:
-        cache_dir: Directory containing the six original project `.npy` files.
+        cache_dir: Directory containing the six processed `.npy` files.
         processed_dir: Destination directory.
         manifest_path: Optional manifest path written after copying.
     """
