@@ -44,6 +44,12 @@ nav:
   - Home: index.md
   - Installation: installation.md
   - Data: data.md
+  - Notebook Examples:
+      - Overview: examples/index.md
+      - Data Postprocessing: examples/00_data_postprocessing.ipynb
+      - TensorFlow: examples/01_tensorflow_reproduction.ipynb
+      - PyTorch: examples/02_pytorch_reproduction.ipynb
+      - JAX/Flax: examples/03_jax_reproduction.ipynb
   - Reproduce Results: reproduce.md
   - Results: results.md
   - API Reference:
@@ -71,7 +77,8 @@ plugins:
   - search
   - autorefs
   - offline
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      execute: false
   - git-revision-date-localized:
       enable_creation_date: true
       strict: false

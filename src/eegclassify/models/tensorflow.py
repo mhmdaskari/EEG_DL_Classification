@@ -33,7 +33,7 @@ def _require_tensorflow() -> None:
 
 
 class TensorFlowClassifierFactory:
-    """Build Keras classifiers matching the original notebook architectures.
+    """Build Keras classifiers for the package model families.
 
     Args:
         model_config: Optional architecture configuration.
@@ -224,7 +224,7 @@ else:  # pragma: no cover
 
 
 class TensorFlowConditionalGAN(_TensorFlowGANBase):
-    """Conditional GAN augmentation model from the original notebook.
+    """Conditional GAN model for synthetic EEG training samples.
 
     Args:
         discriminator: Optional discriminator model.

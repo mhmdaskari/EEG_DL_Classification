@@ -22,7 +22,7 @@ from .constants import (
 
 @dataclass
 class DatasetBundle:
-    """Container for the six processed arrays used by the original notebooks.
+    """Container for the six package processed arrays.
 
     Attributes:
         X_train_valid: Training/validation EEG trials with shape `(n, 22, 1000)`.
@@ -77,7 +77,7 @@ def find_processed_data_dir(candidates: tuple[Path, ...] = LOCAL_CACHE_CANDIDATE
 
 
 def load_processed_arrays(data_dir: Path | str | None = None, mmap_mode: str | None = None) -> DatasetBundle:
-    """Load processed project arrays.
+    """Load processed EEG arrays.
 
     Args:
         data_dir: Directory containing the six `.npy` files. If omitted, known local cache
@@ -101,7 +101,7 @@ def load_processed_arrays(data_dir: Path | str | None = None, mmap_mode: str | N
 
 
 def save_processed_arrays(bundle: DatasetBundle, output_dir: Path | str) -> None:
-    """Save a processed data bundle in the original six-file layout.
+    """Save a processed data bundle in the canonical six-file layout.
 
     Args:
         bundle: Arrays to save.

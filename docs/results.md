@@ -1,19 +1,18 @@
 # Results
 
-The original notebooks are the parity reference for the package implementation.
-Cross-framework parity means matching experiment semantics and landing in the same
-accuracy band, not bitwise-identical weights or histories.
+The table below lists package reference targets for the default EEG classification
+experiments. Cross-framework consistency means matching experiment semantics and
+landing in the same accuracy band, not bitwise-identical weights or histories.
 
-| Experiment | Original notebook accuracy | Parity target |
+| Experiment | Reference accuracy | Acceptance band |
 | --- | ---: | --- |
 | CNN | 70.49% | within about ±5 percentage points |
 | CNN-LSTM | 60.95% | within about ±5 percentage points |
 | LSTM | 39.62% | within about ±5 percentage points |
 | GAN+CNN | 68.23% | within about ±5 percentage points |
 
-GAN augmentation can be applied to any classifier, but only GAN+CNN is compared to
-the original GAN notebook because the legacy project did not report GAN+LSTM or
-GAN+CNN-LSTM baselines.
+GAN augmentation can be applied to any classifier. The reference table includes
+GAN+CNN as the canonical GAN-augmented benchmark path.
 
 Local runs write their detailed metrics to `artifacts/runs/`. Summarize those runs
 in this page before publishing a release.

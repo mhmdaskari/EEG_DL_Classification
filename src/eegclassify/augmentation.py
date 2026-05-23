@@ -32,11 +32,11 @@ class GANAugmentationResult:
 
 
 def interpolation_labels(n_classes: int = 4, samples_per_class: int = 10) -> np.ndarray:
-    """Create legacy GAN interpolation labels for all ordered class pairs.
+    """Create GAN interpolation labels for all ordered class pairs.
 
-    The original GAN-CNN notebook generated `samples_per_class` points between every
-    ordered pair of class labels, including same-class pairs. The generated labels are
-    soft labels and can be used directly with categorical cross-entropy style losses.
+    The routine generates `samples_per_class` points between every ordered pair of
+    class labels, including same-class pairs. The generated labels are soft labels and
+    can be used directly with categorical cross-entropy style losses.
 
     Args:
         n_classes: Number of class labels.

@@ -76,7 +76,7 @@ class TrainingConfig:
         gan_learning_rate: Conditional GAN Adam learning rate.
         use_gan_augmentation: Whether to append synthetic GAN samples to the training split.
         gan_samples_per_class: Number of interpolation samples generated for each ordered
-            class pair in the legacy GAN augmentation routine.
+            class pair in the GAN augmentation routine.
         seed: Framework and data random seed.
         fast_dev_run: If `True`, notebooks/trainers run a one-epoch smoke check.
     """

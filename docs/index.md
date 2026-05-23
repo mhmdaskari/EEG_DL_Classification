@@ -1,12 +1,25 @@
 # EEGClassify
 
-`eegclassify` is a reproducible EEG classification package built from the original C247 project notebooks. It keeps the original CNN, LSTM, CNN-LSTM, and GAN-CNN experiments, while moving the reusable code into a Python package with TensorFlow, PyTorch, and JAX/Flax implementations.
+`eegclassify` is a standalone Python package for reproducible EEG task classification. It combines BCI Competition IV-2a data preparation, experiment-ready preprocessing, and deep learning classifiers across TensorFlow, PyTorch, and JAX/Flax.
 
-The project focuses on:
+The package is designed for users who want to regenerate the processed dataset, run quick framework smoke tests, and scale the same configuration into full training runs.
 
-- explicit BCI Competition IV data set 2a provenance
-- repeatable raw-data conversion into the six `.npy` files used by the original notebooks
-- object-oriented model, training, and preprocessing code
-- notebooks that can run quick smoke checks or full 100-epoch reproductions
+## What You Can Do
 
-The original report remains available as [Report.pdf](https://github.com/mhmdaskari/EEG_DL_Classification/blob/main/Report.pdf), and the original notebook code is preserved under `notebooks/legacy/`.
+- Download and convert public BCI Competition IV-2a raw data.
+- Load the packaged processed `.npy` arrays for local examples.
+- Train CNN, LSTM, and CNN-LSTM classifiers in three frameworks.
+- Add conditional GAN-generated samples to the training split.
+- Compare local runs against the package reference targets.
+- Use notebooks for guided workflows or the CLI for repeatable runs.
+
+## Start Here
+
+1. Install the package with the extras you need in [Installation](installation.md).
+2. Download or regenerate the EEG arrays in [Data](data.md).
+3. Walk through the rendered [Notebook Examples](examples/index.md).
+4. Run CLI or notebook experiments with [Reproduce Results](reproduce.md).
+5. Check target metrics in [Results](results.md).
+6. Build on the package through the [API Reference](api/index.md).
+
+The default examples use `FAST_DEV_RUN=True`, so they are meant to be approachable first and expandable when you are ready for longer runs.

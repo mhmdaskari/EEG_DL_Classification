@@ -111,7 +111,7 @@ def prepare_bci2a_main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--split-map",
         default="builtin",
-        help="Use `builtin` for the course split map, a JSON path, or `none` for trial-block splitting.",
+        help="Use `builtin` for the package split map, a JSON path, or `none` for trial-block splitting.",
     )
     parser.add_argument("--reject-artifacts", action="store_true")
     args = parser.parse_args(argv)
