@@ -46,7 +46,22 @@ nav:
   - Data: data.md
   - Reproduce Results: reproduce.md
   - Results: results.md
-  - API: api.md
+  - API Reference:
+      - Overview: api/index.md
+      - Configuration: api/config.md
+      - Data:
+          - Loading And Comparison: api/data.md
+          - Preprocessing: api/preprocessing.md
+          - BCI IV-2a Conversion: api/bci2a.md
+          - GAN Augmentation: api/augmentation.md
+      - Models:
+          - Overview: api/models/index.md
+          - TensorFlow: api/models/tensorflow.md
+          - PyTorch: api/models/pytorch.md
+          - JAX: api/models/jax.md
+      - Plotting: api/plotting.md
+      - Command Line Interface: api/cli.md
+      - Constants: api/constants.md
 
 watch:
   - src
