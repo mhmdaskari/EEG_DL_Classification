@@ -138,6 +138,20 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# Local EEG data and generated experiment outputs
+/data/raw/
+/data/processed_no_reject/
+/data_temp/
+/artifacts/runs/
+/artifacts/runs_gpu/
+/tmp/
+*.keras
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
 # mypy
 .mypy_cache/
 .dmypy.json

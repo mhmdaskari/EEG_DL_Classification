@@ -1,0 +1,209 @@
+{
+  "all_files_match": true,
+  "atol": 1e-08,
+  "files": {
+    "X_test.npy": {
+      "allclose": true,
+      "exact_match": true,
+      "generated_dtype": "float64",
+      "generated_exists": true,
+      "generated_sha256": "62afadee5b07f538c30faa99d5cf5302a0d19db3286354dc551dfb8b8e962966",
+      "generated_shape": [
+        443,
+        22,
+        1000
+      ],
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "reference_dtype": "float64",
+      "reference_exists": true,
+      "reference_sha256": "62afadee5b07f538c30faa99d5cf5302a0d19db3286354dc551dfb8b8e962966",
+      "reference_shape": [
+        443,
+        22,
+        1000
+      ],
+      "same_dtype": true,
+      "same_shape": true
+    },
+    "X_train_valid.npy": {
+      "allclose": true,
+      "exact_match": true,
+      "generated_dtype": "float64",
+      "generated_exists": true,
+      "generated_sha256": "c5ab2b4065e3214b264b0dfc700fa01f18942cb26553fd489cd049b1034a084e",
+      "generated_shape": [
+        2115,
+        22,
+        1000
+      ],
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "reference_dtype": "float64",
+      "reference_exists": true,
+      "reference_sha256": "c5ab2b4065e3214b264b0dfc700fa01f18942cb26553fd489cd049b1034a084e",
+      "reference_shape": [
+        2115,
+        22,
+        1000
+      ],
+      "same_dtype": true,
+      "same_shape": true
+    },
+    "person_test.npy": {
+      "allclose": true,
+      "exact_match": true,
+      "generated_counts": {
+        "0": 50,
+        "1": 50,
+        "2": 50,
+        "3": 50,
+        "4": 47,
+        "5": 49,
+        "6": 50,
+        "7": 50,
+        "8": 47
+      },
+      "generated_dtype": "float64",
+      "generated_exists": true,
+      "generated_sha256": "d554045f0dfce3b0fb1c74edd63ed2f1ef350911c217ccf0b119e8928dac90fb",
+      "generated_shape": [
+        443,
+        1
+      ],
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "reference_counts": {
+        "0": 50,
+        "1": 50,
+        "2": 50,
+        "3": 50,
+        "4": 47,
+        "5": 49,
+        "6": 50,
+        "7": 50,
+        "8": 47
+      },
+      "reference_dtype": "float64",
+      "reference_exists": true,
+      "reference_sha256": "d554045f0dfce3b0fb1c74edd63ed2f1ef350911c217ccf0b119e8928dac90fb",
+      "reference_shape": [
+        443,
+        1
+      ],
+      "same_dtype": true,
+      "same_shape": true
+    },
+    "person_train_valid.npy": {
+      "allclose": true,
+      "exact_match": true,
+      "generated_counts": {
+        "0": 237,
+        "1": 236,
+        "2": 236,
+        "3": 234,
+        "4": 235,
+        "5": 236,
+        "6": 238,
+        "7": 232,
+        "8": 231
+      },
+      "generated_dtype": "float64",
+      "generated_exists": true,
+      "generated_sha256": "376016de5c55b2c506b278997e2e315031677a6126d14305926db18cc3959b31",
+      "generated_shape": [
+        2115,
+        1
+      ],
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "reference_counts": {
+        "0": 237,
+        "1": 236,
+        "2": 236,
+        "3": 234,
+        "4": 235,
+        "5": 236,
+        "6": 238,
+        "7": 232,
+        "8": 231
+      },
+      "reference_dtype": "float64",
+      "reference_exists": true,
+      "reference_sha256": "376016de5c55b2c506b278997e2e315031677a6126d14305926db18cc3959b31",
+      "reference_shape": [
+        2115,
+        1
+      ],
+      "same_dtype": true,
+      "same_shape": true
+    },
+    "y_test.npy": {
+      "allclose": true,
+      "exact_match": true,
+      "generated_counts": {
+        "769": 111,
+        "770": 127,
+        "771": 96,
+        "772": 109
+      },
+      "generated_dtype": "int32",
+      "generated_exists": true,
+      "generated_sha256": "74f233b3ed568ed65a75035c1aa9058aedc1430462ede28412b00d031cd5276e",
+      "generated_shape": [
+        443
+      ],
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "reference_counts": {
+        "769": 111,
+        "770": 127,
+        "771": 96,
+        "772": 109
+      },
+      "reference_dtype": "int32",
+      "reference_exists": true,
+      "reference_sha256": "74f233b3ed568ed65a75035c1aa9058aedc1430462ede28412b00d031cd5276e",
+      "reference_shape": [
+        443
+      ],
+      "same_dtype": true,
+      "same_shape": true
+    },
+    "y_train_valid.npy": {
+      "allclose": true,
+      "exact_match": true,
+      "generated_counts": {
+        "769": 529,
+        "770": 513,
+        "771": 543,
+        "772": 530
+      },
+      "generated_dtype": "int32",
+      "generated_exists": true,
+      "generated_sha256": "7fa4de1f7d126a475e621fff2dd061736832ccf7a71f4fd56cbf77100e045635",
+      "generated_shape": [
+        2115
+      ],
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "reference_counts": {
+        "769": 529,
+        "770": 513,
+        "771": 543,
+        "772": 530
+      },
+      "reference_dtype": "int32",
+      "reference_exists": true,
+      "reference_sha256": "7fa4de1f7d126a475e621fff2dd061736832ccf7a71f4fd56cbf77100e045635",
+      "reference_shape": [
+        2115
+      ],
+      "same_dtype": true,
+      "same_shape": true
+    }
+  },
+  "generated_dir": "data/processed",
+  "reference_dir": "data_temp",
+  "rtol": 1e-05
+}

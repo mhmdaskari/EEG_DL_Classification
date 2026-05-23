@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-23",
+  "description": "GPU fast-dev smoke runs. These are not full 100-epoch parity results.",
+  "device_note": "TensorFlow, PyTorch, and JAX ran on NVIDIA GeForce RTX 5080 after GPU dependency setup.",
+  "runs": [
+    {
+      "accuracy": 0.4136568848758465,
+      "classifier_epochs": 100,
+      "experiment": "cnn",
+      "fast_dev_run": true,
+      "framework": "pytorch",
+      "gan_epochs": 20,
+      "gan_metadata": null,
+      "metrics_path": "artifacts/runs_gpu/20260523T073721Z/pytorch/cnn/metrics.json",
+      "run_id": "20260523T073721Z"
+    },
+    {
+      "accuracy": 0.39221219015444375,
+      "classifier_epochs": 100,
+      "experiment": "cnn",
+      "fast_dev_run": true,
+      "framework": "jax",
+      "gan_epochs": 20,
+      "gan_metadata": null,
+      "metrics_path": "artifacts/runs_gpu/20260523T073807Z/jax/cnn/metrics.json",
+      "run_id": "20260523T073807Z"
+    },
+    {
+      "accuracy": 0.3786681592464447,
+      "classifier_epochs": 100,
+      "experiment": "cnn",
+      "fast_dev_run": true,
+      "framework": "tensorflow",
+      "gan_epochs": 20,
+      "gan_metadata": null,
+      "metrics_path": "artifacts/runs_gpu/20260523T074239Z/tensorflow/cnn/metrics.json",
+      "run_id": "20260523T074239Z"
+    },
+    {
+      "accuracy": 0.3577878177165985,
+      "classifier_epochs": 100,
+      "experiment": "gan_cnn",
+      "fast_dev_run": true,
+      "framework": "tensorflow",
+      "gan_epochs": 20,
+      "gan_metadata": {
+        "framework": "tensorflow",
+        "gan_epochs": 1,
+        "real_samples": 7024,
+        "synthetic_samples": 160
+      },
+      "metrics_path": "artifacts/runs_gpu/20260523T074314Z/tensorflow/gan_cnn/metrics.json",
+      "run_id": "20260523T074314Z"
+    },
+    {
+      "accuracy": 0.4221218961625282,
+      "classifier_epochs": 100,
+      "experiment": "gan_cnn",
+      "fast_dev_run": true,
+      "framework": "pytorch",
+      "gan_epochs": 20,
+      "gan_metadata": {
+        "device": "cuda",
+        "framework": "pytorch",
+        "gan_epochs": 1,
+        "real_samples": 7024,
+        "synthetic_samples": 160
+      },
+      "metrics_path": "artifacts/runs_gpu/20260523T074325Z/pytorch/gan_cnn/metrics.json",
+      "run_id": "20260523T074325Z"
+    },
+    {
+      "accuracy": 0.4176072240144889,
+      "classifier_epochs": 100,
+      "experiment": "gan_cnn",
+      "fast_dev_run": true,
+      "framework": "jax",
+      "gan_epochs": 20,
+      "gan_metadata": {
+        "framework": "jax",
+        "gan_epochs": 1,
+        "real_samples": 7024,
+        "synthetic_samples": 160
+      },
+      "metrics_path": "artifacts/runs_gpu/20260523T074426Z/jax/gan_cnn/metrics.json",
+      "run_id": "20260523T074426Z"
+    }
+  ]
+}
